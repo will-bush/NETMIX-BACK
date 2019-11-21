@@ -1,0 +1,55 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Title: MyString
+  Year: MyString
+  Rated: MyString
+  Released: MyString
+  Runtime: MyString
+  Genre: MyString
+  Director: MyString
+  Writer: MyString
+  Actors: MyString
+  Plot: MyString
+  Language: MyString
+  Country: MyString
+  Awards: MyString
+  Poster: MyString
+  Metascore: MyString
+  imdbRating: MyString
+  imdbVotes: MyString
+  imdbID: MyString
+  Type: MyString
+  DVD: MyString
+  BoxOffice: MyString
+  Production: MyString
+  Website: MyString
+  totalSeasons: MyString
+  Response: MyString
+
+two:
+  Title: MyString
+  Year: MyString
+  Rated: MyString
+  Released: MyString
+  Runtime: MyString
+  Genre: MyString
+  Director: MyString
+  Writer: MyString
+  Actors: MyString
+  Plot: MyString
+  Language: MyString
+  Country: MyString
+  Awards: MyString
+  Poster: MyString
+  Metascore: MyString
+  imdbRating: MyString
+  imdbVotes: MyString
+  imdbID: MyString
+  Type: MyString
+  DVD: MyString
+  BoxOffice: MyString
+  Production: MyString
+  Website: MyString
+  totalSeasons: MyString
+  Response: MyString
