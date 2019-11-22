@@ -10,6 +10,11 @@ class ContentsController < ApplicationController
         render json: content
     end
 
+    def show
+        content = Content.find(params[:id])
+        render json: content
+    end
+
     private
 
     def content_params

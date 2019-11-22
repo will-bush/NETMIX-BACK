@@ -5,9 +5,15 @@ class ListingsController < ApplicationController
         render json: listings
     end
 
+    def show
+        listing = Listing.find(params[:id])
+        render json: listing, include: [:content]
+        # {id: list.id, list_name: list.list_name, user_id: list.user_id, description: list.description}
+    end
+
     def create
         listing = Listing.create(listing_params)
-        render json: listing
+        render json: listing, include: [:content]
     end
 
     private
