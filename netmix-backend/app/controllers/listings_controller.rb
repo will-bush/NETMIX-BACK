@@ -16,6 +16,12 @@ class ListingsController < ApplicationController
         render json: listing, include: [:content]
     end
 
+    def destroy
+        listing = Listing.find(params[:id])
+        listing.destroy
+        render json: {resp: "listing deleted"}
+    end
+
     private
 
     def listing_params

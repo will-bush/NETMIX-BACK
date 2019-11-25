@@ -12,6 +12,25 @@ class UsersController < ApplicationController
         # {id: user.id, name: user.name, username: user.username, bio: user.bio}
     end
 
+    def create
+        user = User.create(user_params)
+        if user
+        render json: user
+        else
+        render json: {error: "unable to create user"}
+        end
+    end
+
+    # def create
+    #     user = User.new(user_params)
+    #     user.save
+    #     if user
+    #     render json: user
+    #     else
+    #     render json: {error: "unable to create user"}
+    #     end
+    # end
+
     def signin
         user = User.find_by(username: params[:username])
         if user and user.authenticate(params[:password])
@@ -37,6 +56,12 @@ class UsersController < ApplicationController
         else    
             render json: { error:  'Unable to find any lists.' }, status: 401
         end
+    end
+
+    private
+
+    def user_params
+        params.require(:user).permit(:name, :username, :bio, :password)
     end
 
 end
