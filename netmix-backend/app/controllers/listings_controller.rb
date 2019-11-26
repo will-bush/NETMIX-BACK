@@ -22,6 +22,12 @@ class ListingsController < ApplicationController
         render json: {resp: "listing deleted"}
     end
 
+    def update
+        listing = Listing.find(params[:id])
+        listing.update(review: params[:review])
+        render json: listing
+    end
+
     private
 
     def listing_params

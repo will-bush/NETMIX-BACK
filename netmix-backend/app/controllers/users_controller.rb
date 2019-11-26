@@ -21,16 +21,6 @@ class UsersController < ApplicationController
         end
     end
 
-    # def create
-    #     user = User.new(user_params)
-    #     user.save
-    #     if user
-    #     render json: user
-    #     else
-    #     render json: {error: "unable to create user"}
-    #     end
-    # end
-
     def signin
         user = User.find_by(username: params[:username])
         if user and user.authenticate(params[:password])
