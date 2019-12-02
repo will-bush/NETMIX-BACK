@@ -12,6 +12,11 @@ class UsersController < ApplicationController
         # {id: user.id, name: user.name, username: user.username, bio: user.bio}
     end
 
+    # def find
+    #     user = User.find(params[:username])
+    #     render json: user, include: {lists: {include: :listings}}
+    # end
+
     def create
         user = User.create(user_params)
         if user

@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   post '/signin', to: 'users#signin'
   get '/validate', to: 'users#validate'
   get '/lists', to: 'lists#show'
+  # get '/find', to: 'users#find'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
