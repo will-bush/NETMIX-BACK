@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :list_follows
+  resources :user_follows
   resources :list_items
   resources :contents
   resources :listings
