@@ -10,7 +10,7 @@ class User < ApplicationRecord
     private
 
     def attach_default_list
-        List.create(user_id: self.id, list_name: "My Netmix", description: "My first Netmix playlist")
+        List.create(user_id: self.id, list_name: "My Netmix", description: self.username + "'s first Netmix playlist")
     end
 
     def attach_default_user_follow
