@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     def show
         user = User.find(params[:id])
-        render json: user, include: {lists: {include: :listings}}
+        render json: user, include: {lists: {include: :listings}, :listFollows => {only: :list_id}, :userFollows => {only: :following_id}}
         # NEED TO INCLUDE - listFollows: {include: :list_id}, userFollows: {include: :following_id}
     end
 
