@@ -2,20 +2,13 @@ class UsersController < ApplicationController
 
     def index
         users = User.all
-        # render json: users, include: [:lists]
         render json: users, include: {lists: {include: :listings}}
     end
 
     def show
         user = User.find(params[:id])
         render json: user, include: {lists: {include: :listings}, :listFollows => {only: :list_id}, :userFollows => {only: :following_id}}
-        # NEED TO INCLUDE - listFollows: {include: :list_id}, userFollows: {include: :following_id}
     end
-
-    # def find
-    #     user = User.find(params[:username])
-    #     render json: user, include: {lists: {include: :listings}}
-    # end
 
     def create
         user = User.create(user_params)

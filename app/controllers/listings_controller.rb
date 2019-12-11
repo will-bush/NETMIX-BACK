@@ -8,7 +8,6 @@ class ListingsController < ApplicationController
     def show
         listing = Listing.find(params[:id])
         render json: listing, include: [:content]
-        # {id: list.id, list_name: list.list_name, user_id: list.user_id, description: list.description}
     end
 
     def create

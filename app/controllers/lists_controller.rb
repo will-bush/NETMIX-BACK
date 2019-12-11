@@ -27,5 +27,4 @@ class ListsController < ApplicationController
         params.require(:list).permit(:list_name, :description, :user_id)
     end
 
-
 end
