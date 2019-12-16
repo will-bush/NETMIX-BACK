@@ -1,24 +1,11 @@
-# README
+# NETMIX-BACK
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An innovative web app for finding, organising, reviewing and sharing Movies and TV Shows from all of the major online streaming providers.
 
-Things you may want to cover:
+I single handedly built Netmix over the course of just two weeks for my Flatiron School Final Project. In order to achieve the desired functionality I built a Rails backend that followed RESTful conventions and devised relationships for User, List, Listing, Content and Follow models.
 
-* Ruby version
+Demo video available here: https://youtu.be/bm-zx6RhQMs
 
-* System dependencies
+Frontend repository available here: https://github.com/will-bush/NETMIX-FRONT
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
